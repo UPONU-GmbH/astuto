@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     end
 
     constraints subdomain: 'login' do
-      get '/signup', to: 'tenants#new'
+      # get '/signup', to: 'tenants#new'
       get '/is_available', to: 'tenants#is_available'
       
       resource :tenants, only: [:create]
@@ -30,9 +30,9 @@ Rails.application.routes.draw do
     get '/request_billing_page', to: 'billing#request_billing_page'
     
     devise_for :users, :controllers => {
-      :registrations => 'registrations',
+      # :registrations => 'registrations',
       :sessions => 'sessions',
-      :passwords => 'passwords'
+      # :passwords => 'passwords'
     }
 
     devise_scope :user do

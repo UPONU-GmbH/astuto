@@ -1,8 +1,8 @@
 class User < ApplicationRecord
   include TenantOwnable
   
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :confirmable,
+  devise :database_authenticatable, #:registerable,
+         :rememberable, #:recoverable, :confirmable,
          :trackable
     
   validates_confirmation_of :password

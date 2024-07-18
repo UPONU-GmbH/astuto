@@ -92,7 +92,7 @@ en:
       docs: 'Documentation'
       support: 'Support'
       sign_out: 'Sign out'
-    log_in: 'Log in / Sign up'
+    log_in: 'Log in'
   roadmap:
     title: 'Roadmap'
   billing:
@@ -104,7 +104,7 @@ en:
       submit_button: 'Submit feedback'
       submit_anonymous_button: 'Submit anonymously'
       cancel_button: 'Cancel'
-      login_button: 'Log in / Sign up'
+      login_button: 'Log in'
       title: 'Title'
       description: 'Description (optional)'
       no_title: 'Title field is mandatory'
