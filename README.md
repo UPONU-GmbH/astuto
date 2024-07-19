@@ -73,7 +73,7 @@ volumes:
 
 ## Create Docker image and deploy
 
-1. Run docker `compose -f docker-compose-prod.yml build --no-cache --build-arg ENVIRONMENT=production`
+1. Run `docker compose -f docker-compose-prod.yml build --no-cache --build-arg ENVIRONMENT=production`
 2. Pack the image `docker save -o astuto-web_latest.tar astuto-web:latest`
 3. Copy image to target
 4. Load image on target `docker load -i astuto-web_latest.tar`
