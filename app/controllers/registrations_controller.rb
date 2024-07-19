@@ -1,9 +1,9 @@
-# class RegistrationsController < Devise::RegistrationsController
-#   # Needed to have Current.tenant available in Devise's controllers
-#   prepend_before_action :load_tenant_data
-#   before_action :load_oauths, only: [:new]
-#   before_action :set_page_title_new, only: [:new]
-#   before_action :set_page_title_edit, only: [:edit]
+class RegistrationsController < Devise::RegistrationsController
+  # Needed to have Current.tenant available in Devise's controllers
+  prepend_before_action :load_tenant_data
+  before_action :load_oauths, only: [:new]
+  before_action :set_page_title_new, only: [:new]
+  before_action :set_page_title_edit, only: [:edit]
 
 #   # Override destroy to soft delete
 #   def destroy
@@ -37,4 +37,4 @@
 #     def set_page_title_edit
 #       @page_title = t('common.forms.auth.profile_settings')
 #     end
-# end
+end

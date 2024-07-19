@@ -1,9 +1,9 @@
-# class PasswordsController < Devise::PasswordsController
-#   # Needed to have Current.tenant available in Devise's controllers
-#   prepend_before_action :load_tenant_data
+class PasswordsController < Devise::PasswordsController
+  # Needed to have Current.tenant available in Devise's controllers
+  prepend_before_action :load_tenant_data
 
-#   # Needed for OAuth users (otherwise an already logged in user wouldn't be able to reset their password)
-#   skip_before_action :require_no_authentication, :only => [:edit, :update]
+  # Needed for OAuth users (otherwise an already logged in user wouldn't be able to reset their password)
+  skip_before_action :require_no_authentication, :only => [:edit, :update]
 
 #   def update
 #     super
@@ -16,4 +16,4 @@
 #       sign_in(resource_name, resource)
 #     end
 #   end
-# end
+end

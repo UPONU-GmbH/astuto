@@ -79,10 +79,12 @@
                 <div class="dropdown-divider"></div>
               <% end %>
 
+              <% if false %>
               <h6 class="dropdown-header"><%= t('header.menu.profile_header') %></h6>
               <%= link_to t('header.menu.profile_settings'), @header_full_urls ? get_url_for(method(:edit_user_registration_url)) : edit_user_registration_path, class: 'dropdown-item' %>
               <div class="dropdown-divider"></div>
-
+              <% end %>
+              
               <% if current_user.admin? %>
                 <h6 class="dropdown-header"><%= t('header.menu.help_header') %></h6>
                 <% unless @boards.empty? %>
