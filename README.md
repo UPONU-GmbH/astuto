@@ -71,6 +71,13 @@ volumes:
 4. Run `docker compose pull && docker compose up`
 5. You should now have a running instance of Astuto on port 3000. A default user account has been created with credentials email: `admin@example.com`, password: `password`.
 
+## Create Docker image and deploy
+
+1. Run docker `compose -f docker-compose-prod.yml build --no-cache --build-arg ENVIRONMENT=production`
+2. Pack the image `docker save -o astuto-web_latest.tar astuto-web:latest`
+3. Copy image to target
+4. Load image on target `docker load -i astuto-web_latest.tar`
+
 ## Documentation
 
 Check out [docs.astuto.io](https://docs.astuto.io/) to learn how to deploy Astuto, configure custom OAuth providers, customize appearance and more!
